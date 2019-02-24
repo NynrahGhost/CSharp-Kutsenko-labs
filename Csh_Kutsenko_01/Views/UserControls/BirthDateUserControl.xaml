@@ -19,16 +19,14 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <DatePicker Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="10"
+        <DatePicker Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="10"
                  SelectedDate="{Binding Date, UpdateSourceTrigger=PropertyChanged}" SelectedDateFormat="Long" FirstDayOfWeek="Monday" IsDropDownOpen="True"/>
 
-        <TextBox Grid.Column="0" Grid.Row="3" Margin="10" Grid.ColumnSpan="2" IsReadOnly="True" Focusable="False"/>
-        
-        <TextBox Grid.Row="0" Grid.Column="2" Margin="10"
-                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" Focusable="False" Text="{Binding Age, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Grid.Row="1" Grid.Column="2" Margin="10" 
-                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" Focusable="False" Text="{Binding ZodiakWest, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Grid.Row="2" Grid.Column="2" Margin="10" 
-                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" Focusable="False" Text="{Binding ZodiakChineese, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Margin="10"
+                 Focusable="False" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" Text="{Binding Age, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" Margin="10" 
+                 Focusable="False" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" Text="{Binding ZodiakWest, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" Margin="10" 
+                 Focusable="False" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" Text="{Binding ZodiakChineese, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </UserControl>

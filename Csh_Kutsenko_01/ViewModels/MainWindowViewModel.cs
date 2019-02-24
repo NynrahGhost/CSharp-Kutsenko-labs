@@ -11,7 +11,7 @@ namespace Csh_Kutsenko_01.ViewModels
     internal class MainWindowViewModel : BaseViewModel, ILoaderOwner
     {
         private Visibility _loaderVisibility = Visibility.Hidden;
-        private bool _isAnabled = true;
+        private bool _isEnabled = true;
 
         public Visibility LoaderVisibility
         {
@@ -25,8 +25,8 @@ namespace Csh_Kutsenko_01.ViewModels
         }
         public bool IsEnabled
         {
-            get { return _isAnabled; }
-            set { _isAnabled = value; OnPropertyChanged(); }
+            get { return _isEnabled; }
+            set { _isEnabled = value; OnPropertyChanged(); }
         }
     }
 }

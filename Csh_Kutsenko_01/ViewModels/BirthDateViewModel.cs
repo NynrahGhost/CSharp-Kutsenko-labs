@@ -20,10 +20,6 @@ namespace Csh_Kutsenko_01.ViewModels
         private string _age;
         private string _zodiacWest;
         private string _zodiakChineese;
-
-        private ICommand _update;
-
-        public ICommand Update => _update ?? (_update = new RelayCommand<object>(o => UpdateFields()));
         
 
         public DateTime Date
@@ -35,7 +31,6 @@ namespace Csh_Kutsenko_01.ViewModels
                 if (tmp > 135 | value > System.DateTime.Today)
                 {
                     MessageBox.Show("Некоректна дата!");
-                    _date = System.DateTime.Today;
                     return;
                 }
 
@@ -162,24 +157,7 @@ namespace Csh_Kutsenko_01.ViewModels
                 OnPropertyChanged();
             }
         }
-
-
-
-        private void UpdateFields()
-        {
-            _age = ((System.DateTime.Today.Subtract(Date)).Days / 365).ToString(); //(System.DateTime.Now.Year - Date.Year).ToString();
-
-            _zodiacWest = "Temporary field";
-
-            _zodiakChineese = "Temporary field";
-
-        }
-
-        public BirthDateViewModel()
-        {
-
-        }
-
+        
 
         public event PropertyChangedEventHandler PropertyChanged;
 
